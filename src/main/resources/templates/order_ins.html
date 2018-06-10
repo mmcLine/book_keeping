@@ -1,0 +1,135 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amaze UI Admin index Examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" th:href="@{/assets/i/favicon.png}">
+    <link rel="apple-touch-icon-precomposed" th:href="@{/assets/i/app-icon72x72@2x.png}">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" th:href="@{/assets/css/amazeui.min.css}" />
+    <link rel="stylesheet" th:href="@{/assets/css/admin.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/app.css}">
+</head>
+
+<body data-type="generalComponents">
+
+
+<div th:insert="~{index::headPage}"></div>
+
+
+
+
+
+
+    <div class="tpl-page-container tpl-page-header-fixed">
+        <div th:insert="~{index::leftBar}"></div>
+
+
+
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-content-page-title">
+                订单新增
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="#" class="am-icon-home">首页</a></li>
+                <li><a href="#">消费表格</a></li>
+                <li class="am-active">订单新增</li>
+            </ol>
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class="am-icon-code"></span> 新增表单
+                    </div>
+                    <div class="tpl-portlet-input tpl-fz-ml">
+                        <div class="portlet-input input-small input-inline">
+                            <div class="input-icon right">
+                                <i class="am-icon-search"></i>
+                                <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="tpl-block ">
+
+                    <div class="am-g tpl-amazeui-form">
+
+                        <form th:action="@{/book/order/save}" method="post" class="am-form am-form-horizontal">
+                        <div class="am-u-sm-12 am-u-md-9">
+                                <div class="am-form-group">
+                                    <label for="order_name" class="am-u-sm-3 am-form-label">消费事项 / Name</label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" id="order_name" name="name" placeholder="消费事项 / Name" th:value="${order!=null}?${order.name}">
+                                    </div>
+                                </div>
+
+                                    <div class="am-form-group">
+                                        <label for="trade_type" class="am-u-sm-3 am-form-label">消费类型 / Type</label>
+                                        <select data-am-selected="{btnSize: 'sm'}" id="trade_type" name="tradeType">
+                                            <option th:selected="false">所有类别</option>
+                                            <option th:each="tradeType :${tradeTypes}" th:value="${tradeType.pkey}" th:text="${tradeType.typeName}" th:selected="${order!=null}?${tradeType.pkey==order.tradeType.pkey}">1</option>
+                                           <!--类别-->
+                                        </select>
+                                    </div>
+
+                                <div class="am-form-group">
+                                    <label for="amt" class="am-u-sm-3 am-form-label">金额 / Amt</label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" id="amt" placeholder="输入消费金额 / Amt" name="amt" th:value="${order!=null}?${order.amt}">
+                                    </div>
+                                </div>
+
+
+                                <div class="am-form-group">
+                                    <label  class="am-u-sm-3 am-form-label">消费日期 <span class="tpl-form-line-small-title">Date</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input type="date" class="am-form-field tpl-form-no-bg" placeholder="消费日期" data-am-datepicker="" name="trade_date" readonly th:value="${order!=null}?${order.trade_date}"/>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label for="remarks" class="am-u-sm-3 am-form-label">备注 / Remarks</label>
+                                    <div class="am-u-sm-9">
+                                        <textarea class="" rows="5" id="remarks" placeholder="输入备注说明" name="content" th:inline="text" th:value="${order!=null}?${order.content}"></textarea>
+                                    </div>
+                                </div>
+                            <input type="hidden" name="pkey" th:value="${order!=null}?${order.pkey}">
+                                <div class="am-form-group">
+                                    <div class="am-u-sm-9 am-u-sm-push-3">
+                                        <button type="submit" class="am-btn am-btn-primary">保存</button>
+                                    </div>
+                                </div>
+                        </div>
+
+                    </form>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+    <script th:src="@{/assets/js/jquery.min.js}"></script>
+    <script th:src="@{/assets/js/amazeui.min.js}"></script>
+    <script th:src="@{/assets/js/app.js}"></script>
+</body>
+
+</html>

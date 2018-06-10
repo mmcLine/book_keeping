@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script th:src="@{/assets/js/md5.js}"></script>
+<script th:src="@{/assets/js/des.js}"></script>
+<script th:src="@{/assets/js/md5encript.js}"></script>
+<script>
+
+    console.info(strEnc("abcd","11234456"))
+
+</script>
+  <form method="post" action="/book/order/ins">
+      <input name="order.pkey" value="1">
+      <input name="name" type="text" value="aa">
+      <input name="order.tradeType" type="text" value="1" >
+      <input name="order.amt" type="text" value="12" >
+      <input name="order.trade_date" type="text" value="2018-01-01"  >
+      <input name="order.content" type="text" value="aaa" >
+      <input name="order.user" type="text" value="1">
+        <input type="submit">
+  </form>
+</body>
+</html>

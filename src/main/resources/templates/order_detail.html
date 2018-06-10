@@ -1,0 +1,140 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amaze UI Admin index Examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" th:href="@{/assets/i/favicon.png}">
+    <link rel="apple-touch-icon-precomposed" th:href="@{/assets/i/app-icon72x72@2x.png}">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" th:href="@{/assets/css/amazeui.min.css}" />
+    <link rel="stylesheet" th:href="@{/assets/css/admin.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/app.css}">
+</head>
+
+<body data-type="generalComponents">
+
+
+   <div th:insert="~{index::headPage}"></div>
+
+    <div class="tpl-page-container tpl-page-header-fixed">
+
+    <div th:insert="~{index::leftBar}"></div>
+
+
+
+
+
+
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-content-page-title">
+                消费明细
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="#" class="am-icon-home">首页</a></li>
+                <li><a href="#">消费表格</a></li>
+                <li class="am-active">消费明细</li>
+            </ol>
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+
+                    <div class="caption font-green bold">
+                        起始日期:<input type="date" name="startDate" id="orderdetail_start_date">
+                    </div>
+                    <div class="caption font-green bold">
+                        结束日期：<input type="date" name="endDate" id="orderdetail_end_date">
+                    </div>
+
+                    <div class="tpl-portlet-input tpl-fz-ml">
+                    <input type="button" onclick="queryDate(0);" class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" value="搜索">
+                </div>
+                    <div class="tpl-portlet-input tpl-fz-ml">
+                        <input type="button" onclick="exportOrder();" class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" value="导出">
+                    </div>
+
+
+                </div>
+                <div class="tpl-block">
+                    <div class="am-g">
+                        <div class="am-u-sm-12 am-u-md-6">
+                            <div class="am-btn-toolbar">
+                                <div class="am-btn-group am-btn-group-xs">
+                                    <!--<button type="button" class="am-btn am-btn-default am-btn-success" onclick="ins()"><span class="am-icon-plus"></span> 新增</button>-->
+                                    <a th:href="@{/book/order/ins}" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
+                                    <!--<button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>-->
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="am-g">
+                        <div class="am-u-sm-12">
+                            <form class="am-form">
+                                <table class="am-table am-table-striped am-table-hover table-main">
+                                    <thead>
+                                        <tr>
+                                            <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
+                                            <th class="table-id">ID</th>
+                                            <th class="table-title">标题</th>
+                                            <th class="table-type">类别</th>
+                                            <th class="table-author am-hide-sm-only">金额</th>
+                                            <th class="table-date am-hide-sm-only">消费日期</th>
+                                            <th class="table-type">备注</th>
+                                            <th class="table-set">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="orderDetail_tbody">
+                                        <!--  明细数据 -->
+                                    </tbody>
+                                </table>
+                                <div class="am-cf">
+
+                                    <div class="am-fr">
+                                        <ul class="am-pagination tpl-pagination">
+                                            <li class="am-disabled"><a href="#">«</a></li>
+                                            <li class="am-active"><a href="#" onclick="queryDate(0);">1</a></li>
+                                            <li><a href="#" onclick="queryDate(1);">2</a></li>
+                                            <li><a href="#" onclick="queryDate(2);">3</a></li>
+                                            <li><a href="#" onclick="queryDate(3);">4</a></li>
+                                            <li><a href="#" onclick="queryDate(4);">5</a></li>
+                                            <li><a href="#">»</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tpl-alert"></div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <script th:src="@{/assets/js/jquery.min.js}"></script>
+    <script th:src="@{/assets/js/amazeui.min.js}"></script>
+    <script th:src="@{/assets/js/app.js}"></script>
+    <script th:src="@{/assets/js/order_detail.js}"></script>
+</body>
+
+</html>
