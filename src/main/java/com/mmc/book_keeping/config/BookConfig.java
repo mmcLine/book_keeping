@@ -22,7 +22,6 @@ public class BookConfig extends WebMvcConfigurationSupport {
 
     @Override
     protected void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("show");
         registry.addViewController("/login").setViewName("login");
         registry.addViewController("/login.html").setViewName("login");
         registry.addViewController("/index.html").setViewName("index");
@@ -30,6 +29,7 @@ public class BookConfig extends WebMvcConfigurationSupport {
         registry.addViewController("/order_ins.html").setViewName("order_ins");
         registry.addViewController("/chart.html").setViewName("chart");
         registry.addViewController("/test.html").setViewName("test");
+        registry.addViewController("/user_bind.html").setViewName("user_bind");
     }
 
     @Override

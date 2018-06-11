@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Amaze UI Admin index Examples</title>
-	<meta name="description" content="这是一个 index 页面">
+	<meta name="description" content="这是一个 bind 页面">
 	<meta name="keywords" content="index">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="renderer" content="webkit">
@@ -24,20 +24,25 @@
 	<div class="myapp-login-logo-block  tpl-login-max">
 		<div class="myapp-login-logo-text">
 			<div class="myapp-login-logo-text">
-				Amaze UI<span> Login</span> <i class="am-icon-skyatlas"></i>
+				Amaze UI<span> Bind</span> <i class="am-icon-skyatlas"></i>
 
 			</div>
 		</div>
 
 		<div class="login-font">
-			<i>Log In </i> or <span> Sign Up</span>
+			<span>绑定你的手机号</span>
 		</div>
 		<div class="am-u-sm-10 login-am-center">
-			<form class="am-form" action="/book/user/login" method="post">
+			<form class="am-form" action="/bindUser" method="post">
 				<fieldset>
+					<input type="hidden" name="oAuthType" th:value="${oAuthInfo.oAuthType}">
+					<input type="hidden" name="oAuthId" th:value="${oAuthInfo.oAuthId}">
+					<div class="am-form-group">
+						<input type="text"  id="doc-ipt-oauthuser-1"  th:value="${oAuthInfo!=null}?${oAuthInfo.user.name}"  disabled>
+					</div>
 					<div class="am-form-group">
 						<input type="hidden" class="" id="doc-ipt-tel-2" name="tel" >
-						<input type="tel" class="" id="doc-ipt-tel-1" placeholder="输入手机号" th:value="${oAuthInfo!=null}?${oAuthInfo.user.name}">
+						<input type="tel" class="" id="doc-ipt-tel-1" placeholder="输入手机号">
 					</div>
 					<div class="am-form-group">
 						<input type="hidden" id="doc-ipt-pwd-2" name="password">
@@ -49,12 +54,9 @@
 			</form>
 		</div>
 
-
+		<a th:each="oAuthService:${oAuthServices}" th:href="@{${oAuthService.authorizationUrl}}" href="#"
+		   th:text="${oAuthService.oAuthType}">github</a>
 	</div>
-	<div style="bottom: 40%; left: 60%; position: absolute" >
-		<a th:each="oAuthService:${oAuthServices}" th:href="@{${oAuthService.authorizationUrl}}" th:title="@{${oAuthService.oAuthType}}"><img th:src="@{/assets/img/githublogo.png}"></a>
-	</div>
-
 </div>
 
 <script th:src="@{/assets/js/jquery.min.js}"></script>
