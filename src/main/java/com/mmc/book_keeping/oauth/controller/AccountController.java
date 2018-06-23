@@ -5,8 +5,9 @@ import com.mmc.book_keeping.oauth.repository.OauthUserRepository;
 import com.mmc.book_keeping.oauth.repository.UserRepository;
 import com.mmc.book_keeping.oauth.service.OAuthServiceDeractor;
 import com.mmc.book_keeping.oauth.service.OAuthServices;
-import com.mmc.book_keeping.user.User;
-import com.mmc.book_keeping.user.UserService;
+import com.mmc.book_keeping.work.user.User;
+import com.mmc.book_keeping.work.user.UserService;
+import com.mmc.book_keeping.utils.SpringContextUtil;
 import org.scribe.model.Token;
 import org.scribe.model.Verifier;
 import org.slf4j.Logger;
@@ -17,10 +18,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-
-import static com.mmc.book_keeping.user.UserController.OBJECT;
-import static com.mmc.book_keeping.user.UserController.SESSION_LOGIN;
-import static com.mmc.book_keeping.user.UserController.SESSION_USER;
 
 @Controller
 public class AccountController {
@@ -115,8 +112,8 @@ public class AccountController {
      * 登录成功页面
      */
     public String goIndex(HttpServletRequest request,OAuthUser oAuthUser){
-        request.getSession().setAttribute(SESSION_LOGIN,OBJECT);
-        request.getSession().setAttribute(SESSION_USER,oAuthUser.getUser());
+        SpringContextUtil.getLoginUser().setUser(oAuthUser.getUser());
+        SpringContextUtil.getLoginUser().setFamilyer(oAuthUser.getUser().getFamilyer());
         return "redirect:/book/order/getTop6";
     }
 

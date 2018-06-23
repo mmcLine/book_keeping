@@ -1,0 +1,299 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amaze UI Admin index Examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" th:href="@{/assets/i/favicon.png}">
+    <link rel="apple-touch-icon-precomposed" th:href="@{/assets/i/app-icon72x72@2x.png}">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" th:href="@{/assets/css/amazeui.min.css}" />
+    <link rel="stylesheet" th:href="@{/assets/css/admin.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/app.css}">
+    <style>
+        .admin-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1500;
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body data-type="generalComponents">
+
+
+<div th:insert="~{index::headPage}"></div>
+
+<div class="tpl-page-container tpl-page-header-fixed">
+
+    <div th:insert="~{index::leftBar}"></div>
+
+    <div class="tpl-content-wrapper">
+        <div class="tpl-content-page-title">
+            故事墙
+        </div>
+        <ol class="am-breadcrumb">
+            <li><a href="#" class="am-icon-home">首页</a></li>
+            <li><a href="#">个人空间</a></li>
+            <li class="am-active">故事墙</li>
+        </ol>
+
+        <!-- 大照片-->
+        <div class="banner">
+            <div class="container">
+                <h2>最美的梅妮宝贝！！！</h2>
+                <p>这是在温州双屿的罗玛影城里面,她坐在凳子上发呆，我拍下了这张照片</p>
+                <a href="#">READ MORE</a>
+            </div>
+        </div>
+
+
+        <!-- technology-left -->
+        <div class="technology">
+            <div class="container">
+                <div class="col-md-9 technology-left">
+                    <div class="tech-no">
+                        <!-- technology-top -->
+
+                        <div class="tc-ch wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+
+                            <div class="tch-img">
+                                <a href="singlepage.html"><img src="images/t4.jpg" class="img-responsive" alt=""></a>
+                            </div>
+
+                            <h3><a href="singlepage.html">我们相恋了</a></h3>
+                            <h6>BY <a href="singlepage.html">牟明操 </a>2016-04-30</h6>
+                            <p>我们在戈美其的一个会议室相遇了.她穿了一件麻色的西服，衣服还稍稍偏大，我第一眼注意到的是她的手，小小的很可爱。开完会之后我看到她屏保上的跳动的照片，我想这一定是个可爱的女孩，像精灵一样</p>
+                            <p> 后面的日子里我们有了很多接触的机会，每次下了班我会送她回去，上班我们也会一起过来，跟她在一起觉得很开心。当时我想着要是她能做我女朋友该多好</p>
+                            <div class="bht1">
+                                <a href="singlepage.html">Continue Reading</a>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <!-- technology-top -->
+                        <!-- technology-top -->
+                        <div class="w3ls">
+                            <div class="col-md-6 w3ls-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                                <div class="tc-ch">
+                                    <div class="tch-img">
+                                        <a href="singlepage.html">
+                                            <img th:src="@{/assets/cpts/images/mn1.jpg}" class="img-responsive" alt=""></a>
+                                    </div>
+
+                                    <h3><a href="#">我们去玩喽</a></h3>
+                                    <h6>BY <a href="#">牟明操 </a>2016-05-01</h6>
+                                    <p>我们去杭州喽，我们上了动车就开始拍拍拍，她穿了一件长裙，我穿了牛仔外套。我们甜蜜得像许久的恋人一样，手牵着手在杭州的街头漫无目的的逛着，现在回想起来我们除
+                                        了拍了不少好看的照片，并没有看到什么风景。因为我之前根本就没有规划好都要去哪些景点。吃也没吃好，就请她吃了一碗面，后来还被她微博吐槽了。丢脸中，但即便这样，
+                                    缘分还是让我们继续在一起了。那一年我们俩就像是厂里最亲密的一对恋人，每天形影不离，走遍了三期的每个角落。
+                                    </p>
+                                    <div class="bht1">
+                                        <a href="singlepage.html">Read More</a>
+                                    </div>
+                                    <div class="soci">
+                                        <ul>
+                                            <li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
+                                            <li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 w3ls-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                                <div class="tc-ch">
+                                    <div class="tch-img">
+                                        <a href="#"><img th:src="@{/assets/cpts/images/mn2.jpg}" class="img-responsive" alt=""></a>
+                                    </div>
+
+                                    <h3><a href="singlepage.html">亲亲</a></h3>
+                                    <h6>BY <a href="singlepage.html">牟明操 </a>2016-07-31.</h6>
+                                    <p>后来，每周去图书馆成了我们的必备项目。每周星期六下了班，我就坐车去球山花园找她，我们腻在一起，第二天会去吃一顿好吃的，然后去图书馆。
+                                        在路上我们会停下来看看风景，拍拍照。每周我们都过的很充实。</p>
+                                    <div class="bht1">
+                                        <a href="singlepage.html">Read More</a>
+                                    </div>
+                                    <div class="soci">
+                                        <ul>
+                                            <li class="hvr-rectangle-out"><a class="twit" href="#"></a></li>
+                                            <li class="hvr-rectangle-out"><a class="drib" href="#"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div id="story_custom_list_id"></div>
+                        <!-- 动态添加故事，一张照片一个故事 -->
+                        <!--<div class="wthree">-->
+                            <!--<div class="col-md-6 wthree-left wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">-->
+                                <!--<div class="tch-img">-->
+                                    <!--<a href="#"><img src="images/f1.jpg" class="img-responsive" alt=""></a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="col-md-6 wthree-right wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">-->
+                                <!--<h3><a href="#">Lorem Ipsum is simply</a></h3>-->
+                                <!--<h6>BY <a href="singlepage.html">ADAM ROSE </a>JULY 10 2016.</h6>-->
+                                <!--<p>Ut enim ad minim veniam, quis nostrud eiusmod tempor incididunt ut labore et dolore magna aliqua exercitation ullamco laboris .</p>-->
+                                <!--<div class="bht1">-->
+                                    <!--<a href="singlepage.html">Read More</a>-->
+                                <!--</div>-->
+                                <!--<div class="soci">-->
+                                    <!--<ul>-->
+
+                                        <!--<li class="hvr-rectangle-out"><a class="twit" href="#"></a></li>-->
+                                        <!--<li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--<div class="clearfix"></div>-->
+
+                            <!--</div>-->
+                            <!--<div class="clearfix"></div>-->
+                        <!--</div>-->
+
+
+                    </div>
+                </div>
+                <!-- technology-right -->
+                <div class="col-md-3 technology-right">
+
+
+                    <div class="blo-top1">
+
+                        <div class="tech-btm">
+                            <div class="search-1 wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                                <form action="#" method="post">
+                                    <input type="search" name="Search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
+                                    <input type="submit" value=" ">
+                                </form>
+                            </div>
+                            <h4>Popular Posts </h4>
+                            <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                                <div class="blog-grid-left">
+                                    <a href="singlepage.html"><img src="images/t2.jpg" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="blog-grid-right">
+
+                                    <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                                <div class="blog-grid-left">
+                                    <a href="singlepage.html"><img src="images/m2.jpg" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="blog-grid-right">
+
+                                    <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                                <div class="blog-grid-left">
+                                    <a href="singlepage.html"><img src="images/f2.jpg" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="blog-grid-right">
+
+                                    <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                                <div class="blog-grid-left">
+                                    <a href="singlepage.html"><img src="images/t3.jpg" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="blog-grid-right">
+
+                                    <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="blog-grids wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                                <div class="blog-grid-left">
+                                    <a href="singlepage.html"><img src="images/m3.jpg" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="blog-grid-right">
+
+                                    <h5><a href="singlepage.html">Pellentesque dui Maecenas male</a> </h5>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="insta wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+                                <h4>Instagram</h4>
+                                <ul>
+
+                                    <li><a href="singlepage.html"><img th:src="@{/assets/cpts/images/t1.jpg}" class="img-responsive" alt=""></a></li>
+                                    <li><a href="singlepage.html"><img th:src="@{/assets/cpts/images/t1.jpg}" class="img-responsive" alt=""></a></li>
+                                    <li><a href="singlepage.html"><img th:src="@{/assets/cpts/images/t1.jpg}" class="img-responsive" alt=""></a></li>
+                                    <!--<li><a href="singlepage.html"><img th:src="images/m1.jpg" class="img-responsive" alt=""></a></li>-->
+                                    <!--<li><a href="singlepage.html"><img th:src="images/f1.jpg" class="img-responsive" alt=""></a></li>-->
+                                    <!--<li><a href="singlepage.html"><img th:src="images/m2.jpg" class="img-responsive" alt=""></a></li>-->
+                                    <!--<li><a href="singlepage.html"><img th:src="images/f2.jpg" class="img-responsive" alt=""></a></li>-->
+                                    <!--<li><a href="singlepage.html"><img th:src="images/t2.jpg" class="img-responsive" alt=""></a></li>-->
+                                    <!--<li><a href="singlepage.html"><img th:src="images/f3.jpg" class="img-responsive" alt=""></a></li>-->
+                                    <!--<li><a href="singlepage.html"><img th:src="images/t3.jpg" class="img-responsive" alt=""></a></li>-->
+                                    <!--<li><a href="singlepage.html"><img th:src="images/m3.jpg" class="img-responsive" alt=""></a></li>-->
+                                </ul>
+                            </div>
+
+                            <p>Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur, at pro</p>
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+                <div class="clearfix"></div>
+                <!-- technology-right -->
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+<script th:src="@{/assets/js/jquery.min.js}"></script>
+<script th:src="@{/assets/js/amazeui.min.js}"></script>
+<script th:src="@{/assets/js/app.js}"></script>
+<script th:src="@{/assets/js/order_detail.js}"></script>
+<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link th:href="@{/assets/cpts/css/bootstrap.css}" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
+<link th:href="@{/assets/cpts/css/style.css}" rel='stylesheet' type='text/css' />
+<!--<script src="@{assets/cpts/js/jquery-1.11.1.min.js}"></script>-->
+<script th:src="@{/assets/cpts/js/bootstrap.min.js}"></script>
+<!-- animation-effect -->
+<link th:href="@{/assets/cpts/css/animate.min.css}" rel="stylesheet">
+<script th:src="@{/assets/cpts/js/wow.min.js}"></script>
+<script th:src="@{/assets/js/story_list.js}"></script>
+<script>
+    new WOW().init();
+</script>
+</body>
+
+</html>

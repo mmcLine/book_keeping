@@ -1,7 +1,7 @@
 package com.mmc.book_keeping.utils;
 
-import com.mmc.book_keeping.tradeType.TradeType;
-import com.mmc.book_keeping.user.User;
+import com.mmc.book_keeping.work.tradeType.TradeType;
+import com.mmc.book_keeping.work.user.User;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;

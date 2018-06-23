@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONPath;
 import com.mmc.book_keeping.oauth.bean.OAuthUser;
 import com.mmc.book_keeping.oauth.config.OAuthTypes;
-import com.mmc.book_keeping.user.User;
+import com.mmc.book_keeping.work.user.User;
 import org.scribe.model.OAuthRequest;
 import org.scribe.model.Response;
 import org.scribe.model.Token;

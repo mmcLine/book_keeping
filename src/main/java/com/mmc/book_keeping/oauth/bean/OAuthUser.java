@@ -1,6 +1,6 @@
 package com.mmc.book_keeping.oauth.bean;
 
-import com.mmc.book_keeping.user.User;
+import com.mmc.book_keeping.work.user.User;
 
 import javax.persistence.*;
 
