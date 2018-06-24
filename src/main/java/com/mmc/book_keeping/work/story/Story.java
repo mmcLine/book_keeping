@@ -20,7 +20,7 @@ public class Story {
 
     private String imgUrl;
 
-    @JoinColumn(foreignKey = @ForeignKey(name = "user_id", value = ConstraintMode.NO_CONSTRAINT))//关联family表的字段
+    @JoinColumn(foreignKey = @ForeignKey(name = "user_id", value = ConstraintMode.NO_CONSTRAINT))//关联user表的字段
     @ManyToOne
     private User user;
 

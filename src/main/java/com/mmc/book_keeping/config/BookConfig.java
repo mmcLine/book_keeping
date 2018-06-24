@@ -28,11 +28,13 @@ public class BookConfig extends WebMvcConfigurationSupport {
         registry.addViewController("/order_detail.html").setViewName("order_detail");
         registry.addViewController("/order_ins.html").setViewName("order_ins");
         registry.addViewController("/chart.html").setViewName("chart");
-        registry.addViewController("/test.html").setViewName("test");
+        registry.addViewController("/test2.html").setViewName("test2");
         registry.addViewController("/user_bind.html").setViewName("user_bind");
         registry.addViewController("/story_list.html").setViewName("story_list");
         registry.addViewController("/table-images-list.html").setViewName("table-images-list");
         registry.addViewController("/story_ins.html").setViewName("story_ins");
+        registry.addViewController("/menstruation_detail.html").setViewName("menstruation_detail");
+        registry.addViewController("/menstruation_ins.html").setViewName("menstruation_ins");
     }
 
     @Override
