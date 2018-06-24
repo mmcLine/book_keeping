@@ -55,10 +55,14 @@ $.ajax({
     dataType: "json",        //返回数据形式为json
     success: function (result) {
         //请求成功时执行该函数内容，result即为服务器返回的json对象
+        cycles.push(25);
         for(var i=0;i<result.result.length;i++){
            var list=result.result;
             dates.push(list[i].mensDate);
-            cycles.push(list[i].cycle);
+            if(i<list.length-1){
+                cycles.push(list[i].cycle);
+            }
+
         }
 
         echart_mens.setOption({        //加载数据图
